@@ -1,62 +1,26 @@
-# 🔤 Dictionary-Python Program to Sort a Dictionary by Keys and Values
-
-This Python program demonstrates how to sort a dictionary:
-- Alphabetically by keys
-- Alphabetically by values
-
----
+## Dictionary Operations in Python: Merging Two Dictionaries
 
 ## 🎯 Aim
-
-To write a Python program that sorts a dictionary's:
-- Keys in alphabetical order
-- Values in alphabetical order
-
----
+To write a Python program that merges **two dictionaries** and combines their key-value pairs.
 
 ## 🧠 Algorithm
+1. Define two dictionaries `dict1` and `dict2` with some key-value pairs.
+2. Define a function `merge()` that merges the two dictionaries using the `**` unpacking operator.
+   - The merged result will combine keys from both dictionaries. If a key exists in both, the value from `dict2` will overwrite that from `dict1`.
+3. Call the `merge()` function and print the merged dictionary.
 
-1. **Start the program.**
-2. **Define** a dictionary with key-value pairs.
-3. **Sort by Keys**:
-   - Use `sorted(dictionary.items())`
-   - Convert the result to a dictionary using `dict()`
-4. **Sort by Values**:
-   - Use `sorted(dictionary.items(), key=lambda item: item[1])`
-   - Convert the result to a dictionary using `dict()`
-5. **Display** the original and sorted dictionaries.
-6. **End the program.**
-
----
-
-## 🧪Program
+## 🧾 Program
 ```
-data = {
-    'banana': 'yellow',
-    'apple': 'red',
-    'grape': 'purple',
-    'orange': 'orange'
-}
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
 
 
-sorted_by_keys = dict(sorted(data.items()))
+merged_dict = {**dict1, **dict2}
 
-
-sorted_by_values = dict(sorted(data.items(), key=lambda item: item[1]))
-
-
-print("Original Dictionary:")
-print(data)
-
-print("\nSorted by Keys:")
-print(sorted_by_keys)
-
-print("\nSorted by Values:")
-print(sorted_by_values)
+print("Merged Dictionary:", merged_dict)
 ```
-
-## Sample Output
-<img width="1038" height="572" alt="Screenshot 2025-10-19 105848" src="https://github.com/user-attachments/assets/001da94a-b69f-4e96-a7e7-08107f250eea" />
+## Output
+<img width="1042" height="467" alt="Screenshot 2025-10-19 105327" src="https://github.com/user-attachments/assets/d899a1f2-51de-4cae-a243-8544db6d3eb3" />
 
 ## Result
-the Python program that sorts a dictionary's is executed successfully.
+the  Python program that merges **two dictionaries** and combines their key-value pairs is executed successfully.
